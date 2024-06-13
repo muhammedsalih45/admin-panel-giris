@@ -4,22 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Girişi</title>
+    <title>Admin Paneli</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <div class="container">
-        <h2>Admin Girişi</h2>
-        <form id="loginForm">
-            <label for="username">Kullanıcı Adı:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Şifre:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Giriş Yap</button>
-        </form>
-    </div>
+        <h1>Admin Paneli</h1>
+        <div>
+            <label for="business-type">İşletme Türü:</label>
+            <select id="business-type" onchange="updateMenuOptions()">
+                <option value="">Seçin...</option>
+                <option value="cafe">Kafe</option>
+                <option value="restaurant">Lokanta</option>
+            </select>
+        </div>
 
+        <div id="menu-options" class="hidden">
+            <h2>Menü Seçenekleri</h2>
+            <div id="categories"></div>
+            <button onclick="generateMenu()">Menüyü Oluştur</button>
+        </div>
+
+        <div id="menu-display" class="hidden">
+            <h2>Oluşturulan Menü</h2>
+            <ul id="selected-items"></ul>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 
