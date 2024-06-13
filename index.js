@@ -2,14 +2,14 @@ const cafeMenu = {
     "Tatlılar": ["Cheesecake", "Tiramisu", "Brownie"],
     "Soğuk İçecekler": ["Limonata", "Kola", "Meyve Suyu"],
     "Sıcak İçecekler": ["Kahve", "Çay", "Sıcak Çikolata"]
-};
+}
 
 const restaurantMenu = {
     "Izgara": ["Tavuk Izgara", "Köfte", "Biftek"],
     "Kahvaltı": ["Menemen", "Sucuklu Yumurta", "Peynir Tabağı"],
     "Çorbalar": ["Mercimek Çorbası", "Tarhana Çorbası", "Domates Çorbası"],
     "Sulu Yemekler": ["Karnıyarık", "Taze Fasulye", "Etli Nohut"]
-};
+}
 
 function updateMenuOptions() {
     const businessType = document.getElementById('business-type').value;
